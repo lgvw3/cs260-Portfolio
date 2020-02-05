@@ -2,40 +2,64 @@
 <html>
 <head>
   <title>Logan's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <link rel="stylesheet" href="content/index.css" type="text/css"></link>
-  <ul>
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="content/general.css" type="text/css"></link>
+  <link rel="stylesheet" href="content/bodies.css" type="text/css"></link>
+  <link rel="stylesheet" href="content/nav.css" type="text/css"></link>
+  <ul class="nav">
     <li>
       <a href="#" class="active">Home</a>
     </li>
     <li>
-      <a href="birds.html">Birds</a>
+      <a href="birds.html">birds</a>
     </li>
     <li>
-      <a href="smallbirds.html">The birds are small</a>
+      <a href="smallbirds.html">birds are small</a>
     </li>
     <li>
-      <a href="ballbirds.html">The birds are ball</a>
+      <a href="ballbirds.html">birds are ball</a>
     </li>
 </ul>
+<div class="dropdown-container">
+  <div class="dropdown dropdown-menu">
+    <div class="container dropbtn" onclick="change(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+    <div class="dropdown-content" id="drop-nav">
+          <a href="#" class="active">Home</a>
+          <a href="birds.html">birds</a>
+          <a href="smallbirds.html">birds are small</a>
+          <a href="ballbirds.html">birds are ball</a>
+    </div>
+  </div>
+</div>
   <h1>Logan Van Wagoner</h1>
-  <h2>Projects</h2>
-  <p>I have worked on a number of projects in professional, academic, and personal settings
-  <ol>
-    <li>
-      MRI Research Facility webpage
-    </li>
-    <li>
-      Loan Doctor with City 1st Mortgage
-    </li>
-    <li>
-      Evil Hangman
-    </li>
-  </ol>
-  <hr>
-  <h2>Experience</h2>
-  <p>My work experience has prepared me to be a driving force on projects</p>
+  <h2 class="subheadings">Projects</h2>
+  <div>
+  <div class="flex-container">
+    <p class="wrapping-lines">I have worked on a number of projects in professional, academic, and personal settings</p>
+      <ol>
+        <li>
+          MRI Research Facility webpage
+        </li>
+        <li>
+          Loan Doctor with City 1st Mortgage
+        </li>
+        <li>
+          Evil Hangman
+        </li>
+      </ol>
+    </div>
+  </div>
+<h2 class="subheadings">Experience</h2>
+<div>
+  <div class="flex-container">
+  <p class="wrapping-lines">My work experience has prepared me to be a driving force on projects</p>
   <ol>
     <li>
       Brigham Young University | Web Programmer
@@ -47,14 +71,26 @@
       Neighbor | Strategy and Marketing Intern
     </li>
   </ol>
+</div>
+</div>
   <hr>
   <h3>Contact</h3>
   <span>LinkedIn: <a href="https://www.linkedin.com/in/logan-van-wagoner/" target="_blank">Logan Van Wagoner</a></span>
   <span>GitHub: <a href="https://github.com/lgvw3" target="_blank">lgvw3</a></span>
+
+  <script>
+function change(x) {
+  x.classList.toggle("change");
+  if (document.getElementById("drop-nav").style.display === 'block') {
+    document.getElementById("drop-nav").style.display = 'none';
+  }
+  else {
+    document.getElementById("drop-nav").style.display = 'block';
+  }
+}
+
+
+</script>
+
 </body>
 </html>
-
-<!-- About: a short statement about you
-Projects: a list of at least three projects you have worked on (it doesn't matter how simple they are)
-Experience: a list of your work experience
-Contact: a list of ways to contact you, including links to your LinkedIn, GitHub, or other accounts -->
